@@ -40,4 +40,7 @@ sans = Entity(model = 'quad', texture = 'assets/robe.png')
 
 test_cube = Test_button()
 
+
+print('test')
+
 app.run()
