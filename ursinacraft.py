@@ -9,8 +9,8 @@ class Voxel(Button):
             position = position,
             model = 'cube',
             origin_y = 0.5,
-            texture = 'white_cube',
-            color = color.white,
+            texture = color.white,
+            color = color.color(0, 0, random.uniform(0.9, 1)),
             highlight_color = color.lime
             )
 
@@ -20,6 +20,9 @@ class Voxel(Button):
         if self.hovered:
             if key == 'left mouse down':
                 voxel = Voxel(position = self.position + mouse.normal)
+
+            if key == 'right mouse down':
+                destroy(self)
 
 app = Ursina()
 
